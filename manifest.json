@@ -1,0 +1,12 @@
+
+    {
+        "name": "Weather Chrome Ext",
+        "version": "1.0.0",
+        "description": "Update weather condition",
+        "manifest_version": 3,
+        "author": "Themba G Chauke",
+        "action":{
+            "default_popup": "index.html",
+            "default_title": "Daily Weather Update"
+        }
+    }
