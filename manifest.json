@@ -1,12 +1,45 @@
-
-    {
-        "name": "Weather Chrome Ext",
-        "version": "1.0.0",
-        "description": "Update weather condition",
-        "manifest_version": 3,
-        "author": "Themba G Chauke",
-        "action":{
-            "default_popup": "index.html",
-            "default_title": "Daily Weather Update"
+{
+    "name": "Weather Update Extension",
+    "version": "1.2.0",
+    "description": "weather condition Updates, Get the forecast for today.",
+    "manifest_version": 3,
+    "author": "Themba G Chauke",
+    "permissions": [
+        "geolocation"
+    ],
+    "content_scripts": [
+        {
+            "js": [
+                "app.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
         }
+    ],
+    "background.service_worker": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Daily Weather Updates"
+    },
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": {
+            "16": "/images/get_started16.png",
+            "32": "/images/get_started32.png",
+            "48": "/images/get_started48.png",
+            "128": "/images/get_started128.png"
+        }
+    },
+    "icons": {
+        "16": "/images/get_started16.png",
+        "32": "/images/get_started32.png",
+        "48": "/images/get_started48.png",
+        "128": "/images/get_started128.png"
     }
+}
